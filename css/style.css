@@ -139,7 +139,7 @@ body {
 
 @media screen and (max-width: 1500px) {
     .main .container {
-        grid-template-rows: repeat(4, 13.5em);
+        grid-template-rows: repeat(2, 13.5em);
     }
 }
 
@@ -155,7 +155,7 @@ body {
     }
     
     .main .container {
-        grid-template-rows: repeat(4, 9em);
+        grid-template-rows: repeat(2, 9em);
     }
 }
 
