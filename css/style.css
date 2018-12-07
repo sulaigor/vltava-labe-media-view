@@ -1,0 +1,263 @@
+/* general */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+/* clearfix */
+.group:before,
+.group:after { content: " "; display: table; }
+.group:after { clear: both; }
+
+/* element border */
+/** { outline: 3px solid black; } */
+
+body {
+    max-width: 100%;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 150%;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.header,
+.header .container {
+    background: #fff;
+    height: 6.66667em;
+}
+
+.header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header h1 {
+    margin-left: 1em;
+    margin-right: 15%;
+}
+
+.header form {
+    position: relative;
+}
+
+.header input {
+    background: #cacaca;
+    border: 1px solid #000;
+    padding: .2em .4em;
+    height: 2em;
+    width: 20em;
+}
+
+#result {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 20em;
+    background: #000;
+    color: #eee;
+    opacity: .5;
+    z-index: 100;
+}
+
+#result > p {
+    font-size: 70%;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+.header button {
+    position: absolute;
+    border: none;
+    width: 2em;
+    height: 2em;
+    background: url('../img/search.svg') center center no-repeat;
+    background-size: 2em;
+    text-indent: -9999px;
+    top: 0;
+    right: .4em;
+    cursor: pointer;
+}
+
+.footer {
+    font-size: .65em;
+    height: 4em;
+    text-align: center;
+}
+
+.footer p {
+    line-height: 4em;
+}
+
+.main {
+    background: #cacaca;
+    height: auto;
+}
+
+.main .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 18em);
+    grid-gap: .6em;
+    
+    justify-content: center;
+}
+
+.main .container section {
+    background: #0244bd;
+    height: 100%;
+    border-radius: .1em;
+    
+    transition: all .4s ease;
+}
+
+.main .container section:hover,
+.main .container section:focus {
+    transform: scale(1.25);
+    border: 1.5px solid #000;
+    z-index: 10;
+}
+
+.block {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.row-block {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.column-block {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+@media screen and (max-width: 1500px) {
+    .main .container {
+        grid-template-rows: repeat(4, 13.5em);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    
+    .header .container {
+        justify-content: space-between;
+    }
+    
+    .header h1 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .main .container {
+        grid-template-rows: repeat(4, 9em);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .header input {
+        width: 15em;
+    }
+    
+    #result {
+        width: 15em;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    
+    .header {
+        font-size: 85%;
+    }
+    
+    .main .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 9em);
+    }
+    
+    .main .container section:hover,
+    .main .container section:focus {
+        transform: scale(1.175);
+    }
+}
+
+@media screen and (max-width: 730px) {
+    
+    .header {
+        font-size: 75%;
+    }
+    
+    .main .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 9em);
+    }
+    
+    .main .container section:hover,
+    .main .container section:focus {
+        transform: scale(1.125);
+    }
+}
+
+@media screen and (max-width: 660px) {
+    
+    .header h1 {
+        font-size: 140%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    
+    .header .container {
+        flex-direction: column;
+    }
+    
+    .header h1 {
+        text-align: center;
+        margin: .2em 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .main .container {
+        padding: 1em .5em;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 9em);
+    }
+    
+    .main .container section:hover,
+    .main .container section:focus {
+        transform: none;
+        background: #3b67b7;
+    }
+    
+    .row-block,
+    .column-block {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    .header h1 {
+        font-size: 130%;
+    }
+
+    .header input {
+        width: 12em;
+    }
+    
+    #result {
+        width: 12em;
+    }
+    
+    .main .container {
+        padding: .4em;
+    }
+}

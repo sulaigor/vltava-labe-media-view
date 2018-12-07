@@ -1,0 +1,32 @@
+/*
+
+    === Frontend developer - ÚKOL ===
+
+    Úkol se dělí na dvě části:
+
+    1)  Design
+
+        * V první části úkolu půjde o nakódování šablony dle přiloženého obrázku fd-ukol.png, zde nejde až tak o konkrétní design jako takový, takže přesné použití přiložených obrázků není podstatné, ale hlavně jde o vytvoření plně responzivního gridu dle ilustrace v přiloženém obrázku. Grid musí obsahovat tři typy prvků,
+        znázorněny jsou v obrázku. Ty lze skládat vedle sebe, jakým způsobem lze opět jasně vyčíst z ilustrace. Dalším důležitým bodem je responzivita gridu a optimalizace
+        zobrazení od desktopových systémů ( do FULL HD rozlišení ) až po smartphony. Následně bych si představoval hover efekt na jednotlivé karty, kdy se karta opticky
+        vysune směrem k uživateli a zvětší svou velikost o 25%. Tento hover efekt bude vypnut na mobilních zařízeních.
+
+        Nakódovat také hlavičku dle přiloženého zadání, bude se vztahovat k bodu 2.
+
+        Prosím, nepoužívat žádné pluginy ani frameworky.
+
+    2)  JavaScript
+
+        * V druhé části úkolu půjde o vytvoření JavaScriptové třídy pro našeptávání slov dle uživatelského vstupu do textového pole (součástí hlavičky z bodu 1).
+        Při psaní textu do textového pole se rovnou pod ním objeví bílé, vše překrývající okno, ve kterém budou pod sebou vypsávány našeptávaná slova. Po kliku na slovo ze
+        seznamu dojde k jeho doplnění do textového pole. Našeptávání bude probíhat po každém doplněném / smazaném znaku z textového pole.
+
+        Stačí, když slovník k našeptávači bude obsahovat jen přibližně 10 slov začínající od jednoho písmene, pro ilustraci fungování.
+
+        Prosím, nepoužívat žádné pluginy ani frameworky.
+
+
+
+        V případě nejasnosti zvolte řešení dle vlastního uvážení.
+
+*/
